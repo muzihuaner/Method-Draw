@@ -17528,7 +17528,7 @@ MD.Panel = function(){
          $('#path_node_y').val(Math.round(point.y));
          if(point.type) {
            seg_type.val(point.type).removeAttr('disabled');
-           $("#seg_type_label").html(point.type === 4 ? "Straight" : "Curve")
+           $("#seg_type_label").html(point.type === 4 ? "直线" : "曲线")
          } else {
            seg_type.val(4).attr('disabled','disabled');
          }
