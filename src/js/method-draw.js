@@ -700,7 +700,7 @@ window.methodDraw = function() {
     
     var clickClear = function(){
       var dims = curConfig.dimensions;
-      $.confirm("<strong>Do you want to clear the drawing?</strong>\nThis will also erase your undo history", function(ok) {
+      $.confirm("<strong>你想清除现有画布吗?</strong>\n这也将擦除您的撤消历史记录。", function(ok) {
         if(!ok) return;
         setSelectMode();
         svgCanvas.deleteSelectedElements();
@@ -1782,7 +1782,7 @@ window.methodDraw = function() {
       if(undoMgr.getUndoStackSize() === 0) {
         func(true);
       } else {
-        $.confirm("Do you want to open a new file?\nThis will also erase your undo history", func);
+        $.confirm("你要打开一个新文件吗?\n这也将删除你的撤消历史记录", func);
       }
     }
           
