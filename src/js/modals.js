@@ -6,9 +6,9 @@ const state = new State();
 editor.modal = {
   about: new MD.Modal({
     html: `
-      <h1>About this application</h1>
-      <p>Method Draw is a simple <a href="https://github.com/methodofaction/Method-Draw">open source</a> vector drawing application. Method Draw was forked from <a href="https://github.com/SVG-Edit/svgedit">SVG-Edit</a> several years ago with the goal of improving and modernizing the interface.</p>
-      <p>At this time (2021), the author (<a href="http://method.ac/writing">Mark MacKay</a>) is working on improving stability and improving the codebase, which contains a lot of legacy practices. The goal is to create a vector editor suitable for simple graphic design tasks.</p>
+      <h1>关于本应用</h1>
+      <p>Method Draw 是一个免费、 <a href="https://github.com/methodofaction/Method-Draw">开源</a> 的矢量绘图应用. </p>
+      <p>汉化By (<a href="https://github.com/muzihuaner">木子欢儿</a>) .</p>
       `
   }),
   source: new MD.Modal({
@@ -39,7 +39,7 @@ editor.modal = {
         }
 
         if (!svgCanvas.setSvgString($('#svg_source_textarea').val())) {
-          $.confirm("There were parsing errors in your SVG source.\nRevert back to original SVG source?", function(ok) {
+          $.confirm("SVG源代码中存在解析错误。\n还原SVG源代码?", function(ok) {
             if(!ok) return false;
             saveChanges();
           });
@@ -56,7 +56,7 @@ editor.modal = {
     html: `
       <h1>Configuration</h1>
       <div id="configuration">
-        <button class="warning">Erase all data</button>
+        <button class="warning">擦除所有数据</button>
         </div>
       </div>`,
     js: function(el){
@@ -68,15 +68,14 @@ editor.modal = {
   }),
   donate: new MD.Modal({
     html: `
-      <h1>Donate</h1>
+      <h1>捐赠</h1>
       <p>
-        Method Draw relies on your generous donations for continued development.
-        <a href="https://method.ac/donate/">Donate now</a> if you find this application useful.
+        <a href="/">Donate now</a> 
       </p>`
   }),
   shortcuts: new MD.Modal({
     html: `
-      <h1>Shortcuts</h1>
+      <h1>快捷键</h1>
       <div id="shortcuts"></div>`,
     js: function(el){
       el.children[0].classList.add("modal-item-wide");
