@@ -9,6 +9,6 @@
   workarea.appendChild(doc.documentElement);
   const svgCanvas = document.getElementById("svgcanvas");
   const canvasTitle = localStorage.getItem("md-canvasTitle");
-  svgCanvas.setAttribute("title", canvasTitle ? "Loading " + canvasTitle  : "Loading Drawing");
+  svgCanvas.setAttribute("title", canvasTitle ? "Loading " + canvasTitle  : "加载画布中...");
   const svg = workarea.querySelector("svg");
 })();
